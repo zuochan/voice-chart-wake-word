@@ -8,11 +8,11 @@
 
 **-** **必要な Python パッケージ:**
 
-**  **-** [**`openwakeword`**](**https://pypi.org/project/openwakeword/**)**
+-  [`openwakeword`](**https://pypi.org/project/openwakeword/**)
 
-**  **-`pyaudio`
+- `pyaudio`
 
-## 任意の Linux 追加パッケージ
+### (任意) Linux 追加パッケージ
 
 ノイズ抑制機能を使用する場合、Linux 環境では以下のパッケージを追加でインストールしてください：
 
@@ -49,8 +49,6 @@ pip install /path/to/speexdsp_ns.whl
 
 トータルで1〜2時間ほど要します。
 
-🔗 **Colab ノートブック** ** **
-
 **[**👉 カスタムウェイクワード作成ノートブック（Google Colab）**](**https://colab.research.google.com/drive/1qf_2nqbiFh_5OqB_x0VjWFRFDGLf5Tas?usp=sharing**)**
 
 
@@ -63,26 +61,12 @@ pip install /path/to/speexdsp_ns.whl
 **2.**`wake_word.py` **内の以下の引数設定を変更します：**
 
 ```python
-
-
 parser.add_argument(
-
-
-**    **"--model_path",
-
-
-**    **help="The path of a specific model to load",
-
-
-**    **type=str,
-
-
-**    **default="./<ファイル名>.onnx",
-
-
-**    **required=False
-
-
+  "--model_path",
+  help="The path of a specific model to load",
+  type=str,
+  default="./<ファイル名>.onnx",
+  required=False
 )
 ```
 
